@@ -7,6 +7,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,13 +19,18 @@ import android.os.Handler;
 import android.view.MenuItem;
 
 import com.example.youngbeliever.R;
+import com.example.youngbeliever.pojo.HomeModel;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    HomeViewModel homeViewModel;
     Toolbar toolbar;
     DrawerLayout mainDrawer;
     NavigationView mainNavigation;
+    RecyclerView homeRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,6 +41,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.main_toolbar);
         mainDrawer = findViewById(R.id.home_drawer_layout);
         mainNavigation = findViewById(R.id.home_navigation_view);
+        homeRecycler = findViewById(R.id.home_recycler);
+        //Link the ViewModel with Activity
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         //Add ActionBar
         setSupportActionBar(toolbar);
@@ -52,6 +65,39 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //Set Listener
         mainNavigation.setNavigationItemSelectedListener(this);
+
+        //Set Adapter
+        HomeAdapter adapter = new HomeAdapter();
+        homeRecycler.setAdapter(adapter);
+
+        //Observe for data Change && Clicks
+        homeViewModel.sectionData.observe(this, new Observer<ArrayList<HomeModel>>()
+        {
+            @Override
+            public void onChanged(ArrayList<HomeModel> homeModels)
+            {
+                adapter.setList(homeModels, new HomeAdapter.itemClickListener()
+                {
+                    @Override
+                    public void onItemClick(HomeModel homeModel)
+                    {
+                        Intent intent;
+                        switch (homeModel.getSectionName())
+                        {
+                            case "Holy Quran":
+                                intent = new Intent(getApplicationContext(), QuranActivity.class);
+                                startActivity(intent);
+                                break;
+                        }
+                    }
+                });
+            }
+        });
+
+        //Recycler Layout and setting the data
+        int nomOfCol = 2;
+        homeRecycler.setLayoutManager(new GridLayoutManager(this, nomOfCol));
+        homeViewModel.getSectionData();
     }
 
     //BackPress Close DrawerLayout

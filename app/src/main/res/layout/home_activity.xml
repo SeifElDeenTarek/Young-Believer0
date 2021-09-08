@@ -16,7 +16,7 @@
         android:id="@+id/home_navigation_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/main_navigation_header"
-        app:menu="@menu/mian_navigation_menu"/>
+        app:menu="@menu/main_navigation_menu"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,6 +25,39 @@
         <include
             layout="@layout/main_toolbar"
             android:id="@+id/main_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/main_toolbar"
+            android:id="@+id/anchor"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/primary_blue">
+
+            <TextView
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:gravity="top"
+                android:textSize="44sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/anchor"
+            android:id="@+id/home_recycler"/>
 
     </RelativeLayout>
 
