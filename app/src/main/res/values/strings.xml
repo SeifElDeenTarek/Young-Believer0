@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">YoungBeliever</string>
+    <string name="believer_name">Believer Name</string>
+    <string name="believer_mail">believer.mail.example.com</string>
+    <string name="holy_quran">Holy Quran</string>
+    <string name="al_azkar">Al-Azkar</string>
+    <string name="duas">Duas</string>
+    <string name="islam_pillars">Islam\'s Pillars</string>
+    <string name="prophets_stories">Prophet\'s Stories</string>
+
+    <string name="openNavigationDrawer">Open Navigation Drawer</string>
+    <string name="closeNavigationDrawer">Close Navigation Drawer</string>
 </resources>
