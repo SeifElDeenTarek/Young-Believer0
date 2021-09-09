@@ -17,9 +17,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.youngbeliever.R;
 import com.example.youngbeliever.pojo.AsmaaAllahModel;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -31,6 +33,8 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
     NavigationView asmaaAllahNavigation;
     AsmaaAllahViewModel asmaaAllahViewModel;
     RecyclerView asmaaAllahRecycler;
+    MaterialCardView dynamicCardView;
+    TextView asmAllahMeaning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -41,6 +45,8 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
         asmaaAllahToolbar = findViewById(R.id.asmaa_allah_toolbar);
         asmaaAllahDrawer = findViewById(R.id.asmaa_allah_drawer_layout);
         asmaaAllahNavigation = findViewById(R.id.asmaa_allah_navigation_view);
+        dynamicCardView = findViewById(R.id.card_view);
+        asmAllahMeaning = findViewById(R.id.asm_allah_meaning);
         asmaaAllahRecycler = findViewById(R.id.asmaa_allah_recycler);
         asmaaAllahViewModel = ViewModelProviders.of(this).get(AsmaaAllahViewModel.class);
 
@@ -76,6 +82,8 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
                     @Override
                     public void onItemClick(AsmaaAllahModel asmaaAllahModel)
                     {
+                        dynamicCardView.setVisibility(View.VISIBLE);
+                        asmAllahMeaning.setText(asmaaAllahModel.getAsmAllahMeaning());
                     }
                 });
             }
@@ -93,6 +101,10 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
         {
             asmaaAllahDrawer.closeDrawer(GravityCompat.START);
         }
+        else if(dynamicCardView.isShown())
+        {
+            dynamicCardView.setVisibility(View.GONE);
+        }
         else {
             super.onBackPressed();
         }
@@ -104,6 +116,10 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
         Intent intent;
         switch (item.getItemId())
         {
+            case R.id.home_page:
+                intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+                break;
             case R.id.holy_quran:
                 intent = new Intent(this, QuranActivity.class);
                 startActivity(intent);

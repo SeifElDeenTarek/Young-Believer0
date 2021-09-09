@@ -15,7 +15,7 @@
         android:textColor="@color/white"
         android:background="@color/primary_blue"
         android:gravity="center"
-        android:textSize="33sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:id="@+id/asm_allah"/>
 

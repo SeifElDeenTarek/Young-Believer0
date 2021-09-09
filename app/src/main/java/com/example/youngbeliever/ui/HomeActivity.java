@@ -48,6 +48,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //Add ActionBar
         setSupportActionBar(mainToolbar);
 
+        //CheckItem
+        mainNavigation.setCheckedItem(R.id.home_page);
         //Bring the NavigationView Forward
         mainNavigation.bringToFront();
 
@@ -126,6 +128,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Intent intent;
         switch (item.getItemId())
         {
+            case R.id.home_page:
+                mainDrawer.closeDrawers();
+                break;
             case R.id.holy_quran:
                 intent = new Intent(this, QuranActivity.class);
                 startActivity(intent);
