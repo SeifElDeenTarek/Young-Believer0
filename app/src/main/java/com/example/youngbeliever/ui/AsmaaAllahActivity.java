@@ -124,6 +124,13 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
                 intent = new Intent(this, QuranActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.arkan_eslam:
+                intent = new Intent(this, ArkanActivity.class);
+                startActivity(intent);
+            case R.id.azkar:
+                intent = new Intent(this, AzkarActivity.class);
+                startActivity(intent);
+                break;
             case R.id.god_names:
                 asmaaAllahDrawer.closeDrawers();
                 break;
