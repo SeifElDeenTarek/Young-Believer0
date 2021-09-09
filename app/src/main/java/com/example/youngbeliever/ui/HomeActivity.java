@@ -5,7 +5,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,6 +16,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.youngbeliever.R;
 import com.example.youngbeliever.pojo.HomeModel;
@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mainNavigation = findViewById(R.id.home_navigation_view);
         homeRecycler = findViewById(R.id.home_recycler);
         //Link the ViewModel with Activity
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
 
         //Add ActionBar
         setSupportActionBar(mainToolbar);
@@ -69,6 +69,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //Set Adapter
         HomeAdapter adapter = new HomeAdapter();
         homeRecycler.setAdapter(adapter);
+        //set the data
+        homeViewModel.getSectionData();
 
         //Observe for data Change && Clicks
         homeViewModel.sectionData.observe(this, new Observer<ArrayList<HomeModel>>()
@@ -89,7 +91,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                                 startActivity(intent);
                                 break;
                             case R.string.god_names:
-                                intent = new Intent(getApplicationContext(), AsmaaAllah.class);
+                                intent = new Intent(getApplicationContext(), AsmaaAllahActivity.class);
                                 startActivity(intent);
                                 break;
                         }
@@ -98,10 +100,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        //Recycler Layout and setting the data
+        //Recycler Layout
         int nomOfCol = 2;
         homeRecycler.setLayoutManager(new GridLayoutManager(this, nomOfCol));
-        homeViewModel.getSectionData();
+        //direction to RTL
+        homeRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 
     //BackPress Close DrawerLayout
@@ -128,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             case R.id.god_names:
-                intent = new Intent(this, AsmaaAllah.class);
+                intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);
                 break;
             default:

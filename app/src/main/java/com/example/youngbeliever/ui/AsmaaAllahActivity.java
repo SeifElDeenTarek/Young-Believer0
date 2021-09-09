@@ -6,19 +6,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.youngbeliever.R;
+import com.example.youngbeliever.pojo.AsmaaAllahModel;
 import com.google.android.material.navigation.NavigationView;
 
-public class AsmaaAllah extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+
+public class AsmaaAllahActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+{
     Toolbar asmaaAllahToolbar;
     DrawerLayout asmaaAllahDrawer;
     NavigationView asmaaAllahNavigation;
+    AsmaaAllahViewModel asmaaAllahViewModel;
+    RecyclerView asmaaAllahRecycler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,10 +41,12 @@ public class AsmaaAllah extends AppCompatActivity implements NavigationView.OnNa
         asmaaAllahToolbar = findViewById(R.id.asmaa_allah_toolbar);
         asmaaAllahDrawer = findViewById(R.id.asmaa_allah_drawer_layout);
         asmaaAllahNavigation = findViewById(R.id.asmaa_allah_navigation_view);
+        asmaaAllahRecycler = findViewById(R.id.asmaa_allah_recycler);
+        asmaaAllahViewModel = ViewModelProviders.of(this).get(AsmaaAllahViewModel.class);
 
         setSupportActionBar(asmaaAllahToolbar);
-        asmaaAllahNavigation.setCheckedItem(R.id.god_names);
 
+        asmaaAllahNavigation.setCheckedItem(R.id.god_names);
         asmaaAllahNavigation.bringToFront();
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
@@ -45,6 +60,30 @@ public class AsmaaAllah extends AppCompatActivity implements NavigationView.OnNa
         actionBarDrawerToggle.syncState();
 
         asmaaAllahNavigation.setNavigationItemSelectedListener(this);
+
+        AsmaaAllahAdapter adapter = new AsmaaAllahAdapter();
+        asmaaAllahRecycler.setAdapter(adapter);
+
+        asmaaAllahViewModel.getAsmaaAllah();
+
+        asmaaAllahViewModel.asmAllahData.observe(this, new Observer<ArrayList<AsmaaAllahModel>>()
+        {
+            @Override
+            public void onChanged(ArrayList<AsmaaAllahModel> asmaaAllahModels)
+            {
+                adapter.setList(asmaaAllahModels, new AsmaaAllahAdapter.itemClickListener()
+                {
+                    @Override
+                    public void onItemClick(AsmaaAllahModel asmaaAllahModel)
+                    {
+                    }
+                });
+            }
+        });
+
+        int noOfCol = 3;
+        asmaaAllahRecycler.setLayoutManager(new GridLayoutManager(this, noOfCol));
+        asmaaAllahRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 
     @Override

@@ -10,12 +10,13 @@
     app:cardElevation="@dimen/card_elevation">
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_weight="1"
-        android:textColor="@drawable/color_white"
+        android:textColor="@color/white"
         android:background="@color/primary_blue"
         android:gravity="center"
+        android:textSize="33sp"
+        android:textStyle="bold"
         android:id="@+id/asm_allah"/>
 
 </com.google.android.material.card.MaterialCardView>

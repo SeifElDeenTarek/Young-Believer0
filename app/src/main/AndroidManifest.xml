@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YoungBeliever">
-        <activity android:name=".ui.AsmaaAllah"></activity>
+        <activity android:name=".ui.AsmaaAllahActivity"></activity>
         <activity android:name=".ui.QuranActivity" />
         <activity android:name=".ui.HomeActivity">
             <intent-filter>
