@@ -24,7 +24,7 @@ public class ArkanActivity extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quran_activity);
+        setContentView(R.layout.arkan_activity);
 
         arkanToolbar = findViewById(R.id.arkan_toolbar);
         arkanDrawer = findViewById(R.id.arkan_drawer_layout);
