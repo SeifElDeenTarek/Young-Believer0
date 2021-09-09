@@ -75,9 +75,19 @@ public class AzkarActivity extends AppCompatActivity implements NavigationView.O
                 intent = new Intent(this, QuranActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.arkan_eslam:
+                intent = new Intent(this, ArkanActivity.class);
+                startActivity(intent);
             case R.id.azkar:
                 azkarDrawer.closeDrawers();
                 break;
+            case R.id.duas:
+                intent = new Intent(this, DuasActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.qess_rosl:
+                intent = new Intent(this, StoriesActivity.class);
+                startActivity(intent);
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);

@@ -77,11 +77,17 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
             case R.id.arkan_eslam:
                 intent = new Intent(this, ArkanActivity.class);
                 startActivity(intent);
-                break;
             case R.id.azkar:
                 intent = new Intent(this, AzkarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.duas:
+                intent = new Intent(this, DuasActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.qess_rosl:
+                intent = new Intent(this, StoriesActivity.class);
+                startActivity(intent);
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);

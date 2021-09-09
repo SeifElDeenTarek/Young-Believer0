@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 {
     HomeViewModel homeViewModel;
     Toolbar mainToolbar;
-    DrawerLayout mainDrawer;
+    DrawerLayout homeDrawer;
     NavigationView mainNavigation;
     RecyclerView homeRecycler;
 
@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.home_activity);
 
         mainToolbar = findViewById(R.id.home_toolbar);
-        mainDrawer = findViewById(R.id.home_drawer_layout);
+        homeDrawer = findViewById(R.id.home_drawer_layout);
         mainNavigation = findViewById(R.id.home_navigation_view);
         homeRecycler = findViewById(R.id.home_recycler);
         //Link the ViewModel with Activity
@@ -48,25 +48,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //Add ActionBar
         setSupportActionBar(mainToolbar);
 
-        //CheckItem
-        mainNavigation.setCheckedItem(R.id.home_page);
         //Bring the NavigationView Forward
         mainNavigation.bringToFront();
 
         //Connect DrawerLayout with ActionBar
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,
-                mainDrawer,
+                homeDrawer,
                 mainToolbar,
                 R.string.openNavigationDrawer,
                 R.string.closeNavigationDrawer
         );
         //Add Drawer Listener
-        mainDrawer.addDrawerListener(actionBarDrawerToggle);
+        homeDrawer.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
         //Set Listener
         mainNavigation.setNavigationItemSelectedListener(this);
+        //CheckItem
+        mainNavigation.setCheckedItem(R.id.home_page);
 
         //Set Adapter
         HomeAdapter adapter = new HomeAdapter();
@@ -92,6 +92,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                                 intent = new Intent(getApplicationContext(), QuranActivity.class);
                                 startActivity(intent);
                                 break;
+                            case R.string.islam_pillars:
+                                intent = new Intent(getApplicationContext(), ArkanActivity.class);
+                                startActivity(intent);
+                                break;
+                            case R.string.al_azkar:
+                                intent = new Intent(getApplicationContext(), AzkarActivity.class);
+                                startActivity(intent);
+                                break;
+                            case R.string.duas:
+                                intent = new Intent(getApplicationContext(), DuasActivity.class);
+                                startActivity(intent);
+                                break;
+                            case R.string.prophets_stories:
+                                intent = new Intent(getApplicationContext(), StoriesActivity.class);
+                                startActivity(intent);
+                                break;
                             case R.string.god_names:
                                 intent = new Intent(getApplicationContext(), AsmaaAllahActivity.class);
                                 startActivity(intent);
@@ -113,9 +129,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onBackPressed()
     {
-        if(mainDrawer.isDrawerOpen(GravityCompat.START))
+        if(homeDrawer.isDrawerOpen(GravityCompat.START))
         {
-            mainDrawer.closeDrawer(GravityCompat.START);
+            homeDrawer.closeDrawer(GravityCompat.START);
         }
         else {
             super.onBackPressed();
@@ -129,7 +145,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId())
         {
             case R.id.home_page:
-                mainDrawer.closeDrawers();
+                homeDrawer.closeDrawers();
                 break;
             case R.id.holy_quran:
                 intent = new Intent(this, QuranActivity.class);
@@ -142,12 +158,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, AzkarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.duas:
+                intent = new Intent(this, DuasActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.qess_rosl:
+                intent = new Intent(this, StoriesActivity.class);
+                startActivity(intent);
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);
                 break;
-            default:
-                return true;
         }
         //Control Close Duration
         new Handler().postDelayed(new Runnable()
@@ -155,7 +176,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void run()
             {
-                mainDrawer.closeDrawers();
+                homeDrawer.closeDrawers();
             }
         },200);
         return true;

@@ -9,12 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YoungBeliever">
-        <activity android:name=".ui.ArkanActivity"></activity>
-        <activity android:name=".ui.StoriesActivity" />
-        <activity android:name=".ui.DuasActivity" />
-        <activity android:name=".ui.AzkarActivity" />
-        <activity android:name=".ui.AsmaaAllahActivity" />
-        <activity android:name=".ui.QuranActivity" />
+        <activity
+            android:name=".ui.ArkanActivity"
+            android:label="@string/islam_pillars"/>
+        <activity
+            android:name=".ui.StoriesActivity"
+            android:label="@string/prophets_stories"/>
+        <activity
+            android:name=".ui.DuasActivity"
+            android:label="@string/duas"/>
+        <activity
+            android:name=".ui.AzkarActivity"
+            android:label="@string/al_azkar"/>
+        <activity
+            android:name=".ui.AsmaaAllahActivity"
+            android:label="@string/god_names"/>
+        <activity
+            android:name=".ui.QuranActivity"
+            android:label="@string/holy_quran"/>
         <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
