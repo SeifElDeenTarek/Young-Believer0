@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     HomeViewModel homeViewModel;
-    Toolbar toolbar;
+    Toolbar mainToolbar;
     DrawerLayout mainDrawer;
     NavigationView mainNavigation;
     RecyclerView homeRecycler;
@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
-        toolbar = findViewById(R.id.main_toolbar);
+        mainToolbar = findViewById(R.id.home_toolbar);
         mainDrawer = findViewById(R.id.home_drawer_layout);
         mainNavigation = findViewById(R.id.home_navigation_view);
         homeRecycler = findViewById(R.id.home_recycler);
@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         //Add ActionBar
-        setSupportActionBar(toolbar);
+        setSupportActionBar(mainToolbar);
 
         //Bring the NavigationView Forward
         mainNavigation.bringToFront();
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 mainDrawer,
-                toolbar,
+                mainToolbar,
                 R.string.openNavigationDrawer,
                 R.string.closeNavigationDrawer
         );
@@ -84,8 +84,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         Intent intent;
                         switch (homeModel.getSectionName())
                         {
-                            case "Holy Quran":
+                            case R.string.holy_quran:
                                 intent = new Intent(getApplicationContext(), QuranActivity.class);
+                                startActivity(intent);
+                                break;
+                            case R.string.god_names:
+                                intent = new Intent(getApplicationContext(), AsmaaAllah.class);
                                 startActivity(intent);
                                 break;
                         }
@@ -123,7 +127,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, QuranActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.god_names:
+                intent = new Intent(this, AsmaaAllah.class);
+                startActivity(intent);
+                break;
             default:
                 return true;
         }

@@ -10,4 +10,5 @@
 
     <string name="openNavigationDrawer">Open Navigation Drawer</string>
     <string name="closeNavigationDrawer">Close Navigation Drawer</string>
+    <string name="god_names">God Names</string>
 </resources>

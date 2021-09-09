@@ -3,9 +3,9 @@ package com.example.youngbeliever.pojo;
 public class HomeModel
 {
     int sectionImage;
-    String sectionName;
+    int sectionName;
 
-    public HomeModel(int sectionImage, String sectionName)
+    public HomeModel(int sectionImage, int sectionName)
     {
         this.sectionImage = sectionImage;
         this.sectionName = sectionName;
@@ -21,12 +21,12 @@ public class HomeModel
         this.sectionImage = sectionImage;
     }
 
-    public String getSectionName()
+    public int getSectionName()
     {
         return sectionName;
     }
 
-    public void setSectionName(String sectionName)
+    public void setSectionName(int sectionName)
     {
         this.sectionName = sectionName;
     }

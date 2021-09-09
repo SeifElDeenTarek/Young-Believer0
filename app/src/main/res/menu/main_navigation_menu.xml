@@ -22,8 +22,8 @@
             android:icon="@drawable/outline_menu_white_36"
             android:title="@string/prophets_stories"/>
         <item
-            android:id="@+id/title6"
+            android:id="@+id/god_names"
             android:icon="@drawable/outline_menu_white_36"
-            android:title="Title6"/>
+            android:title="@string/god_names"/>
     </group>
 </menu>
