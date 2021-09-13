@@ -15,7 +15,8 @@
         android:id="@+id/home_navigation_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/main_navigation_header"
-        app:menu="@menu/main_navigation_menu"/>
+        app:menu="@menu/main_navigation_menu"
+        android:layoutDirection="rtl"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
