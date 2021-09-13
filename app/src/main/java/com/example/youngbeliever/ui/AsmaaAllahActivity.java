@@ -106,6 +106,8 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
             dynamicCardView.setVisibility(View.GONE);
         }
         else {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
             super.onBackPressed();
         }
     }
@@ -127,6 +129,7 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
             case R.id.arkan_eslam:
                 intent = new Intent(this, ArkanActivity.class);
                 startActivity(intent);
+                break;
             case R.id.azkar:
                 intent = new Intent(this, AzkarActivity.class);
                 startActivity(intent);
@@ -138,6 +141,7 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
             case R.id.qess_rosl:
                 intent = new Intent(this, StoriesActivity.class);
                 startActivity(intent);
+                break;
             case R.id.god_names:
                 asmaaAllahDrawer.closeDrawers();
                 break;

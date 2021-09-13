@@ -57,6 +57,8 @@ public class DuasActivity extends AppCompatActivity implements NavigationView.On
             duasDrawer.closeDrawer(GravityCompat.START);
         }
         else {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
             super.onBackPressed();
         }
     }
@@ -78,6 +80,7 @@ public class DuasActivity extends AppCompatActivity implements NavigationView.On
             case R.id.arkan_eslam:
                 intent = new Intent(this, ArkanActivity.class);
                 startActivity(intent);
+                break;
             case R.id.azkar:
                 intent = new Intent(this, AzkarActivity.class);
                 startActivity(intent);
@@ -88,6 +91,7 @@ public class DuasActivity extends AppCompatActivity implements NavigationView.On
             case R.id.qess_rosl:
                 intent = new Intent(this, StoriesActivity.class);
                 startActivity(intent);
+                break;
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);

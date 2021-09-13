@@ -56,7 +56,9 @@ public class AzkarActivity extends AppCompatActivity implements NavigationView.O
         {
             azkarDrawer.closeDrawer(GravityCompat.START);
         }
-        else{
+        else {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
             super.onBackPressed();
         }
     }
@@ -78,6 +80,7 @@ public class AzkarActivity extends AppCompatActivity implements NavigationView.O
             case R.id.arkan_eslam:
                 intent = new Intent(this, ArkanActivity.class);
                 startActivity(intent);
+                break;
             case R.id.azkar:
                 azkarDrawer.closeDrawers();
                 break;
@@ -88,6 +91,7 @@ public class AzkarActivity extends AppCompatActivity implements NavigationView.O
             case R.id.qess_rosl:
                 intent = new Intent(this, StoriesActivity.class);
                 startActivity(intent);
+                break;
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);

@@ -57,6 +57,8 @@ public class StoriesActivity extends AppCompatActivity implements NavigationView
             storiesDrawer.closeDrawer(GravityCompat.START);
         }
         else {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
             super.onBackPressed();
         }
     }
@@ -78,6 +80,7 @@ public class StoriesActivity extends AppCompatActivity implements NavigationView
             case R.id.arkan_eslam:
                 intent = new Intent(this, ArkanActivity.class);
                 startActivity(intent);
+                break;
             case R.id.azkar:
                 intent = new Intent(this, AzkarActivity.class);
                 startActivity(intent);
@@ -88,6 +91,7 @@ public class StoriesActivity extends AppCompatActivity implements NavigationView
                 break;
             case R.id.qess_rosl:
                 storiesDrawer.closeDrawers();
+                break;
             case R.id.god_names:
                 intent = new Intent(this, AsmaaAllahActivity.class);
                 startActivity(intent);
