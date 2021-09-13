@@ -91,6 +91,7 @@ public class AsmaaAllahActivity extends AppCompatActivity implements NavigationV
 
         int noOfCol = 3;
         asmaaAllahRecycler.setLayoutManager(new GridLayoutManager(this, noOfCol));
+        //direction to RTL
         asmaaAllahRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 

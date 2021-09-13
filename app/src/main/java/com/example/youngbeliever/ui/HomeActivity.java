@@ -121,8 +121,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //Recycler Layout
         int nomOfCol = 2;
         homeRecycler.setLayoutManager(new GridLayoutManager(this, nomOfCol));
-        //direction to RTL
-        homeRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 
     //BackPress Close DrawerLayout

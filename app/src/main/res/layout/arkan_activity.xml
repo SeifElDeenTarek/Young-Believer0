@@ -15,8 +15,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/main_navigation_header"
         app:menu="@menu/main_navigation_menu"
-        android:id="@+id/arkan_navigation_view"
-        android:layoutDirection="rtl"/>
+        android:id="@+id/arkan_navigation_view"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

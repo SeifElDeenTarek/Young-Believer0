@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">المؤمن الصغير</string>
+    <string name="believer_name">اسم المؤمن</string>
+    <string name="holy_quran">القرآن الكريم</string>
+    <string name="al_azkar">الأذكار</string>
+    <string name="duas">أدعية</string>
+    <string name="islam_pillars">اركان الأسلام</string>
+    <string name="prophets_stories">قصص الأنبياء</string>
+    <string name="god_names">اسماء الله الحسني</string>
+    <string name="home_page">الرئيسة</string>
+    <string name="believer_mail">believer.mail.example.com</string>
+</resources>
