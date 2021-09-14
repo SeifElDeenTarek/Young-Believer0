@@ -22,7 +22,8 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
 
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return 4;
     }
 

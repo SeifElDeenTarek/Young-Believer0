@@ -33,8 +33,8 @@ public class AzkarSbahFragment extends Fragment
         azkarSbahViewModel = ViewModelProviders.of(this).get(AzkarSbahViewModel.class);
 
         RecyclerView azkarSbahRecycler = rootView.findViewById(R.id.azkar_recycler);
-
         AzkarAdapter adapter = new AzkarAdapter();
+
         azkarSbahRecycler.setAdapter(adapter);
 
         azkarSbahViewModel.getZekr();
