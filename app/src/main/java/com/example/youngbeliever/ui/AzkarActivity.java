@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.view.MenuItem;
 
 import com.example.youngbeliever.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class AzkarActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -47,6 +50,14 @@ public class AzkarActivity extends AppCompatActivity implements NavigationView.O
         actionBarDrawerToggle.syncState();
 
         azkarNavigation.setNavigationItemSelectedListener(this);
+
+        ViewPager azkarViewPager = findViewById(R.id.azkar_view_pager);
+        AzkarFragmentAdapter adapter = new AzkarFragmentAdapter(this, getSupportFragmentManager());
+
+        azkarViewPager.setAdapter(adapter);
+
+        TabLayout azkarTabLayout = findViewById(R.id.azkar_tabs);
+        azkarTabLayout.setupWithViewPager(azkarViewPager);
     }
 
     @Override

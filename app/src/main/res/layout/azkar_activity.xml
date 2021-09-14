@@ -24,6 +24,22 @@
         <include
             layout="@layout/main_toolbar"
             android:id="@+id/azkar_toolbar"/>
+        
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/azkar_toolbar"
+            android:id="@+id/azkar_tabs"
+            android:layoutDirection="rtl"
+            android:background="@color/primary_blue"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#A8A19E"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/azkar_tabs"
+            android:id="@+id/azkar_view_pager"/>
 
     </RelativeLayout>
 

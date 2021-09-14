@@ -16,18 +16,8 @@ public class HomeModel
         return sectionImage;
     }
 
-    public void setSectionImage(int sectionImage)
-    {
-        this.sectionImage = sectionImage;
-    }
-
     public int getSectionName()
     {
         return sectionName;
-    }
-
-    public void setSectionName(int sectionName)
-    {
-        this.sectionName = sectionName;
     }
 }
