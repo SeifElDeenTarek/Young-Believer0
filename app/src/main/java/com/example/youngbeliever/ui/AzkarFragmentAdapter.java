@@ -31,18 +31,18 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
     {
         if (position == 0)
         {
-            return mContext.getString(R.string.al_azkar);
+            return mContext.getString(R.string.sbah_zekr);
         }
         else if (position == 1)
         {
-            return mContext.getString(R.string.al_azkar);
+            return mContext.getString(R.string.msaa_zekr);
         }
         else if (position == 2)
         {
-            return mContext.getString(R.string.al_azkar);
+            return mContext.getString(R.string.wdoo_zekr);
         }
         else {
-            return mContext.getString(R.string.duas);
+            return mContext.getString(R.string.after_pray_zekr);
         }
     }
 

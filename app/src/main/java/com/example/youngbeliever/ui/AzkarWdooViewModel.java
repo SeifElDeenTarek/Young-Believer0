@@ -20,17 +20,17 @@ public class AzkarWdooViewModel extends ViewModel
     private ArrayList<AzkarModel> getZekrFromDataBase()
     {
         ArrayList<AzkarModel> azkarList = new ArrayList<>();
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning95));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
         return azkarList;
     }
 }
