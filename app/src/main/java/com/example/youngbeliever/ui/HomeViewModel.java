@@ -21,12 +21,12 @@ public class HomeViewModel extends ViewModel
     private ArrayList<HomeModel> getSectionFromDataBase()
     {
         ArrayList<HomeModel> sectionList = new ArrayList<>();
-        sectionList.add(new HomeModel(R.drawable.color_white, R.string.holy_quran));
-        sectionList.add(new HomeModel(R.drawable.color_white, R.string.islam_pillars));
+        sectionList.add(new HomeModel(R.drawable.holy_quran, R.string.holy_quran));
+        sectionList.add(new HomeModel(R.drawable.arkan, R.string.islam_pillars));
         sectionList.add(new HomeModel(R.drawable.color_white, R.string.al_azkar));
-        sectionList.add(new HomeModel(R.drawable.color_white, R.string.duas));
-        sectionList.add(new HomeModel(R.drawable.color_white, R.string.prophets_stories));
-        sectionList.add(new HomeModel(R.drawable.color_white, R.string.god_names));
+        sectionList.add(new HomeModel(R.drawable.duas, R.string.duas));
+        sectionList.add(new HomeModel(R.drawable.qess_rosl, R.string.prophets_stories));
+        sectionList.add(new HomeModel(R.drawable.asmaa_allah, R.string.god_names));
         return sectionList;
     }
 }
