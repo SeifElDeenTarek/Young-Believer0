@@ -37,7 +37,7 @@ public class AzkarSbahFragment extends Fragment
 
         azkarSbahRecycler.setAdapter(adapter);
 
-        azkarSbahViewModel.getZekr();
+        azkarSbahViewModel.getSbahZekr();
 
         azkarSbahViewModel.azkarData.observe(getViewLifecycleOwner(), new Observer<ArrayList<AzkarModel>>()
         {

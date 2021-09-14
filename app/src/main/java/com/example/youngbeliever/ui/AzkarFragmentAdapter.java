@@ -33,7 +33,17 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
         {
             return mContext.getString(R.string.al_azkar);
         }
-        return mContext.getString(R.string.al_azkar);
+        else if (position == 1)
+        {
+            return mContext.getString(R.string.al_azkar);
+        }
+        else if (position == 2)
+        {
+            return mContext.getString(R.string.al_azkar);
+        }
+        else {
+            return mContext.getString(R.string.duas);
+        }
     }
 
     @NonNull
@@ -44,6 +54,16 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
         {
             return new AzkarSbahFragment();
         }
-        return new AzkarSbahFragment();
+        else if (position == 1)
+        {
+            return new AzkarMsaaFragment();
+        }
+        else if (position == 2)
+        {
+            return new AzkarWdooFragment();
+        }
+        else {
+            return new AzkarAfterPrayFragment();
+        }
     }
 }

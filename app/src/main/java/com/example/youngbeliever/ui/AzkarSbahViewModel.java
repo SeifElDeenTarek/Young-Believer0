@@ -12,7 +12,7 @@ public class AzkarSbahViewModel extends ViewModel
 {
     public MutableLiveData<ArrayList<AzkarModel>> azkarData = new MutableLiveData<>();
 
-    public void getZekr()
+    public void getSbahZekr()
     {
         azkarData.setValue(getZekrFromDataBase());
     }
