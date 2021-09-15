@@ -15,19 +15,18 @@
         android:background="@color/primary_blue"
         android:minHeight="88dp">
 
-        <TextView
+        <ImageView
             android:layout_width="88dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:id="@+id/zekr_times"
-            android:textColor="@color/white"/>
+            android:id="@+id/dua_prophet"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="start"
             android:padding="7dp"
-            android:id="@+id/zekr"
+            android:id="@+id/dua"
             android:textColor="@color/white"/>
 
     </LinearLayout>

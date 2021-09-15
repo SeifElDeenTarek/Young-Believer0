@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ScrollView;
 
 import com.example.youngbeliever.R;
 import com.example.youngbeliever.pojo.HomeModel;
@@ -31,6 +32,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout homeDrawer;
     NavigationView mainNavigation;
     RecyclerView homeRecycler;
+    ScrollView homeScroll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -41,10 +43,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mainToolbar = findViewById(R.id.home_toolbar);
         homeDrawer = findViewById(R.id.home_drawer_layout);
         mainNavigation = findViewById(R.id.home_navigation_view);
+        homeScroll = findViewById(R.id.home_scroll_view);
         homeRecycler = findViewById(R.id.home_recycler);
         //Link the ViewModel with Activity
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-
+        //smooth scrollview
+        homeScroll.fullScroll(View.FOCUS_DOWN);
+        homeScroll.setSmoothScrollingEnabled(true);
         //Add ActionBar
         setSupportActionBar(mainToolbar);
 

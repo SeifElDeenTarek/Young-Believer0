@@ -25,6 +25,23 @@
             layout="@layout/main_toolbar"
             android:id="@+id/duas_toolbar"/>
 
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duas_toolbar"
+            android:id="@+id/duas_tabs"
+            android:layoutDirection="rtl"
+            android:background="@color/primary_blue"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#A8A19E"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/duas_tabs"
+            android:id="@+id/duas_view_pager"
+            android:layoutDirection="rtl"/>
+
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
