@@ -29,14 +29,14 @@ public class DuasFragmentAdapter extends FragmentPagerAdapter
     {
         if (position == 0)
         {
-            return mContext.getString(R.string.sbah_zekr);
+            return mContext.getString(R.string.quran_dua);
         }
         else if (position == 1)
         {
-            return mContext.getString(R.string.msaa_zekr);
+            return mContext.getString(R.string.rasol_dua);
         }
         else {
-            return mContext.getString(R.string.after_pray_zekr);
+            return mContext.getString(R.string.rosl_dua);
         }
     }
 

@@ -13,6 +13,9 @@
     <string name="after_pray_zekr" translatable="false">بعد الصلاة</string>
 
     <string name="duas">Duas</string>
+    <string name="quran_dua" translatable="false">القرانية</string>
+    <string name="rasol_dua" translatable="false">النبي</string>
+    <string name="rosl_dua" translatable="false">نبوية</string>
 
     <string name="islam_pillars">Islam\'s Pillars</string>
 

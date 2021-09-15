@@ -23,7 +23,7 @@ public class DuasAdapter extends RecyclerView.Adapter<DuasAdapter.DuasViewHolder
     @Override
     public DuasAdapter.DuasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-        return new DuasViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.duas_itam, parent, false));
+        return new DuasViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.duas_item, parent, false));
     }
 
     @Override

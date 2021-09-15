@@ -28,8 +28,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
+                android:layout_height="wrap_content"
                 android:gravity="start"
                 android:padding="7dp"
                 android:id="@+id/dua"
@@ -37,12 +36,11 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:gravity="start"
                 android:padding="7dp"
                 android:id="@+id/dua_info"
-                android:textColor="@color/white"/>
+                android:textColor="#A8A19E"/>
 
         </LinearLayout>
 
