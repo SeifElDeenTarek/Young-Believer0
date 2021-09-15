@@ -9,10 +9,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.youngbeliever.R;
 
-public class AzkarFragmentAdapter extends FragmentPagerAdapter
+public class DuasFragmentAdapter extends FragmentPagerAdapter
 {
     private Context mContext;
-    public AzkarFragmentAdapter(Context context, @NonNull FragmentManager fragmentActivity)
+    public DuasFragmentAdapter(Context context, @NonNull FragmentManager fragmentActivity)
     {
         super(fragmentActivity);
         mContext = context;
@@ -22,7 +22,7 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
     @Override
     public int getCount()
     {
-        return 4;
+        return 3;
     }
 
     public CharSequence getPageTitle(int position)
@@ -35,10 +35,6 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
         {
             return mContext.getString(R.string.msaa_zekr);
         }
-        else if (position == 2)
-        {
-            return mContext.getString(R.string.wdoo_zekr);
-        }
         else {
             return mContext.getString(R.string.after_pray_zekr);
         }
@@ -50,18 +46,14 @@ public class AzkarFragmentAdapter extends FragmentPagerAdapter
     {
         if (position == 0)
         {
-            return new AzkarSbahFragment();
+            return new DuasQuranFragment();
         }
         else if (position == 1)
         {
-            return new AzkarMsaaFragment();
-        }
-        else if (position == 2)
-        {
-            return new AzkarWdooFragment();
+            return new DuasRasolFragment();
         }
         else {
-            return new AzkarAfterPrayFragment();
+            return new DuasRoslFragment();
         }
     }
 }

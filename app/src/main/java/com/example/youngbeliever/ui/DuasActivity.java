@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.MenuItem;
 
 import com.example.youngbeliever.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class DuasActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -47,6 +49,14 @@ public class DuasActivity extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
 
         duasNavigation.setNavigationItemSelectedListener(this);
+
+        ViewPager duasViewPager = findViewById(R.id.duas_view_pager);
+        DuasFragmentAdapter adapter = new DuasFragmentAdapter(this, getSupportFragmentManager());
+
+        duasViewPager.setAdapter(adapter);
+
+        TabLayout duasTabLayout = findViewById(R.id.duas_tabs);
+        duasTabLayout.setupWithViewPager(duasViewPager);
     }
 
     @Override
