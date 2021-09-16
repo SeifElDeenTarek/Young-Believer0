@@ -6,20 +6,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.youngbeliever.R;
+import com.example.youngbeliever.pojo.QuranModel;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class QuranActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     Toolbar quranToolbar;
     DrawerLayout quranDrawer;
     NavigationView quranNavigation;
+    RecyclerView quranRecycler;
+    QuranViewModel quranViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,6 +39,9 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
         quranToolbar = findViewById(R.id.quran_toolbar);
         quranDrawer = findViewById(R.id.quran_drawer_layout);
         quranNavigation = findViewById(R.id.quran_navigation_view);
+        quranRecycler = findViewById(R.id.quran_recycler_view);
+
+        quranViewModel = ViewModelProviders.of(this).get(QuranViewModel.class);
 
         setSupportActionBar(quranToolbar);
 
@@ -47,6 +60,29 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
         actionBarDrawerToggle.syncState();
 
         quranNavigation.setNavigationItemSelectedListener(this);
+
+        QuranAdapter adapter = new QuranAdapter();
+        quranRecycler.setAdapter(adapter);
+
+        quranViewModel.getSuraData();
+
+        quranViewModel.suraDate.observe(this, new Observer<ArrayList<QuranModel>>()
+        {
+            @Override
+            public void onChanged(ArrayList<QuranModel> quranModels)
+            {
+                adapter.setList(quranModels, new QuranAdapter.itemClickListener()
+                {
+                    @Override
+                    public void onItemCLick(QuranModel quranModel)
+                    {
+                    }
+                });
+            }
+        });
+
+        quranRecycler.setLayoutManager(new LinearLayoutManager(this));
+        quranRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 
     @Override

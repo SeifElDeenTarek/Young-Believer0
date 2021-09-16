@@ -6,12 +6,18 @@
     <string name="home_page">Home</string>
 
     <string name="holy_quran">Holy Quran</string>
+    <string name="sura_num1" translatable="false">100</string>
+    <string name="sura_name1" translatable="false">سورة الفاتحة</string>
+    <string name="sura_revelation" translatable="false">مكية</string>
+    <string name="sura_ayah_num" translatable="false">7 آيــات</string>
+
+    
+    
+    
     <string name="islam_pillars" translatable="false">Islam\'s Pillars</string>
     <string name="islam_pillar1" translatable="false">الشهادتان</string>
+    
     <string name="islam_pillar2" translatable="false">الصلاة</string>
-    <string name="islam_pillar3" translatable="false">الزكاة</string>
-    <string name="islam_pillar4" translatable="false">الصوم</string>
-    <string name="islam_pillar5" translatable="false">الحج</string>
     <string name="slah_way_1" translatable="false">الصلوات الخمس</string>
     <string name="slah_way_2" translatable="false">القيام</string>
     <string name="slah_way_3" translatable="false">تكبيرة الإحرام</string>
@@ -23,6 +29,10 @@
     <string name="slah_way_9" translatable="false">الركعة الثالثة والرابعة</string>
     <string name="slah_way_10" translatable="false">التشهد الأخير</string>
     <string name="slah_way_11" translatable="false">السلام</string>
+    
+    <string name="islam_pillar3" translatable="false">الزكاة</string>
+    <string name="islam_pillar4" translatable="false">الصوم</string>
+    <string name="islam_pillar5" translatable="false">الحج</string>
 
     <string name="al_azkar">Al-Azkar</string>
     <string name="sbah_zekr" translatable="false">الصباح</string>

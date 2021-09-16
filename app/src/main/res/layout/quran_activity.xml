@@ -25,6 +25,12 @@
             layout="@layout/main_toolbar"
             android:id="@+id/quran_toolbar"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/quran_toolbar"
+            android:id="@+id/quran_recycler_view"/>
+
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
