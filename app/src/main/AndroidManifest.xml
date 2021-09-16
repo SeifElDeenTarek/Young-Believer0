@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YoungBeliever">
-        <activity android:name=".ui.StoriesPDF"></activity>
+        <activity android:name=".ui.SlahVideo"></activity>
+        <activity android:name=".ui.StoriesPDF" />
         <activity
             android:name=".ui.ArkanActivity"
             android:label="@string/islam_pillars"

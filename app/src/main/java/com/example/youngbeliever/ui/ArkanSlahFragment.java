@@ -1,5 +1,6 @@
 package com.example.youngbeliever.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ public class ArkanSlahFragment extends Fragment
                     @Override
                     public void onItemClick(ArkanSlahModel arkanSlahModel)
                     {
+                        intent(arkanSlahModel.getSlahWay());
                     }
                 });
             }
@@ -59,5 +61,12 @@ public class ArkanSlahFragment extends Fragment
         slahRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         slahRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         return rootView;
+    }
+
+    private void intent(int name)
+    {
+        Intent intent = new Intent(getContext(), SlahVideo.class);
+        intent.putExtra("name" , name);
+        startActivity(intent);
     }
 }
