@@ -27,7 +27,8 @@
             android:gravity="start"
             android:padding="7dp"
             android:id="@+id/zekr"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
