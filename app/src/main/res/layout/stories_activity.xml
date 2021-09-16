@@ -25,6 +25,12 @@
             layout="@layout/main_toolbar"
             android:id="@+id/stories_toolbar"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/stories_toolbar"
+            android:id="@+id/stories_recycler"/>
+
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
