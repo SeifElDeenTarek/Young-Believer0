@@ -20,17 +20,8 @@ public class AzkarWdooViewModel extends ViewModel
     private ArrayList<AzkarModel> getZekrFromDataBase()
     {
         ArrayList<AzkarModel> azkarList = new ArrayList<>();
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning10));
+        azkarList.add(new AzkarModel(1, R.string.wdoo_zekr1));
+        azkarList.add(new AzkarModel(1, R.string.wdoo_zekr2));
         return azkarList;
     }
 }

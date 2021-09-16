@@ -20,17 +20,36 @@ public class AzkarMsaaViewModel extends ViewModel
     private ArrayList<AzkarModel> getZekrFromDataBase()
     {
         ArrayList<AzkarModel> azkarList = new ArrayList<>();
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning5));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr1));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr2));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr3));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr4));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr5));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr6));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr7));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr8));
+        azkarList.add(new AzkarModel(4, R.string.msaa_zekr9));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr10));
+        azkarList.add(new AzkarModel(7, R.string.msaa_zekr11));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr12));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr13));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr14));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr15));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr16));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr17));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr18));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr19));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr20));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr21));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr22));
+        azkarList.add(new AzkarModel(10, R.string.msaa_zekr23));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr24));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr25));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr26));
+        azkarList.add(new AzkarModel(3, R.string.msaa_zekr27));
+        azkarList.add(new AzkarModel(100, R.string.msaa_zekr28));
+        azkarList.add(new AzkarModel(1, R.string.msaa_zekr29));
+        azkarList.add(new AzkarModel(100, R.string.msaa_zekr30));
         return azkarList;
     }
 }

@@ -20,17 +20,16 @@ public class AzkarAfterPrayViewModel extends ViewModel
     private ArrayList<AzkarModel> getZekrFromDataBase()
     {
         ArrayList<AzkarModel> azkarList = new ArrayList<>();
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
-        azkarList.add(new AzkarModel(3, R.string.asm_meaning1));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr1));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr2));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr3));
+        azkarList.add(new AzkarModel(33, R.string.after_pray_zekr4));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr5));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr6));
+        azkarList.add(new AzkarModel(10, R.string.after_pray_zekr7));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr8));
+        azkarList.add(new AzkarModel(7, R.string.after_pray_zekr9));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr10));
         return azkarList;
     }
 }

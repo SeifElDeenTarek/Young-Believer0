@@ -48,6 +48,8 @@ public class StoriesActivity extends AppCompatActivity implements NavigationView
         actionBarDrawerToggle.syncState();
 
         storiesNavigation.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override

@@ -11,6 +11,11 @@ public class AzkarModel
         this.zekr = zekr;
     }
 
+    public void setZekrTimes(int zekrTimes)
+    {
+        this.zekrTimes = zekrTimes;
+    }
+
     public int getZekrTimes()
     {
         return zekrTimes;

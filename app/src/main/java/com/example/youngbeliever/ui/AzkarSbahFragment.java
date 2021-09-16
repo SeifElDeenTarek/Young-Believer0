@@ -49,6 +49,12 @@ public class AzkarSbahFragment extends Fragment
                     @Override
                     public void onItemClick(AzkarModel azkarModel)
                     {
+                        int zekrTimes = azkarModel.getZekrTimes();
+                        for (int i = zekrTimes; i > 0; i--)
+                        {
+                            zekrTimes -= 1;
+                            azkarModel.setZekrTimes(zekrTimes);
+                        }
                     }
                 });
             }
