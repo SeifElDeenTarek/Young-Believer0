@@ -99,6 +99,7 @@ public class ArkanSlahFragment extends Fragment
             @Override
             public void onClick(View v)
             {
+                floatingActionButton.setBackgroundColor(getResources().getColor(R.color.dark_blue));
                 slahContainer.setVisibility(View.GONE);
                 slahVideoView.stopPlayback();
                 floatingActionButton.setVisibility(View.GONE);

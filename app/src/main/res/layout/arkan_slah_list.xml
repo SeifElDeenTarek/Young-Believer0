@@ -33,10 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/primary_blue"
+        android:backgroundTint="@color/white"
         android:src="@drawable/outline_close_white_48"
         android:layout_margin="16dp"
         android:visibility="gone"/>
-
 
 </RelativeLayout>

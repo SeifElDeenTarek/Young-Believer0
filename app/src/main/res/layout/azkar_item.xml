@@ -53,7 +53,8 @@
                 android:gravity="start"
                 android:padding="7dp"
                 android:id="@+id/zekr_reward"
-                android:textColor="@color/secondary_text"/>
+                android:textColor="@color/secondary_text"
+                android:textSize="16dp"/>
 
         </LinearLayout>
 
