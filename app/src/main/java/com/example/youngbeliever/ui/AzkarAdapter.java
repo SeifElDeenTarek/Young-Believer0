@@ -29,7 +29,26 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.AzkarViewHol
     public void onBindViewHolder(@NonNull AzkarAdapter.AzkarViewHolder holder, int position)
     {
         holder.zekrTimes.setText(Integer.toString(azkarList.get(position).getZekrTimes()));
+
+        if(azkarList.get(position).bsmlaHasText())
+        {
+            holder.bsmla.setText(azkarList.get(position).getBsmla());
+            holder.bsmla.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.bsmla.setVisibility(View.GONE);
+        }
+
         holder.zekr.setText(azkarList.get(position).getZekr());
+
+        if(azkarList.get(position).zakrRewardHasText())
+        {
+            holder.zekrReward.setText(azkarList.get(position).getZekrReward());
+            holder.zekrReward.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.zekrReward.setVisibility(View.GONE);
+        }
 
         holder.itemView.setOnClickListener(v ->{
             itemClickListener.onItemClick(azkarList.get(position));
@@ -57,12 +76,14 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.AzkarViewHol
 
     public class AzkarViewHolder extends RecyclerView.ViewHolder
     {
-        TextView zekrTimes, zekr;
+        TextView zekrTimes, zekr, bsmla, zekrReward;
         public AzkarViewHolder(@NonNull View itemView)
         {
             super(itemView);
             zekrTimes = itemView.findViewById(R.id.zekr_times);
             zekr = itemView.findViewById(R.id.zekr);
+            bsmla = itemView.findViewById(R.id.bsmla);
+            zekrReward = itemView.findViewById(R.id.zekr_reward);
         }
     }
 }

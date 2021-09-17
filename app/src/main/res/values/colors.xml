@@ -10,4 +10,5 @@
     <color name="primary_blue">#0071BD</color>
     <color name="light_blue">#589FF0</color>
     <color name="dark_blue">#00468C</color>
+    <color name="secondary_text">#A8A19E</color>
 </resources>

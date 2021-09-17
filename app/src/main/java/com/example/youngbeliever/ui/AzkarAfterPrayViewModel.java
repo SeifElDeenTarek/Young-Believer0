@@ -25,7 +25,7 @@ public class AzkarAfterPrayViewModel extends ViewModel
         azkarList.add(new AzkarModel(1, R.string.after_pray_zekr3));
         azkarList.add(new AzkarModel(33, R.string.after_pray_zekr4));
         azkarList.add(new AzkarModel(1, R.string.after_pray_zekr5));
-        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr6));
+        azkarList.add(new AzkarModel(1, R.string.after_pray_zekr6, "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ", R.string.after_pray_zekr_reward6));
         azkarList.add(new AzkarModel(10, R.string.after_pray_zekr7));
         azkarList.add(new AzkarModel(1, R.string.after_pray_zekr8));
         azkarList.add(new AzkarModel(7, R.string.after_pray_zekr9));
