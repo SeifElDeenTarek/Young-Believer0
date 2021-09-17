@@ -12,19 +12,19 @@
         android:layout_height="0dp"
         android:layout_weight=".3"
         android:textColor="@color/white"
-        android:text="@string/shhada"
+        android:text="@string/som"
         android:padding="7dp"
         android:gravity="start"
         android:textSize="33sp"
         android:textStyle="bold"
-        android:id="@+id/shhada"/>
+        android:id="@+id/som"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:src="@drawable/shhada"
-        android:id="@+id/shhada_image"
+        android:src="@drawable/som"
+        android:id="@+id/som_image"
         android:padding="10dp"/>
 
     <TextView
@@ -32,10 +32,10 @@
         android:layout_height="0dp"
         android:layout_weight=".8"
         android:textColor="@color/white"
-        android:text="@string/shhada_info"
+        android:text="@string/som_info"
         android:padding="7dp"
         android:gravity="start"
         android:textSize="20sp"
-        android:id="@+id/shhada_info"/>
+        android:id="@+id/som_info"/>
 
 </LinearLayout>

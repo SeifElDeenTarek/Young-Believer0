@@ -73,7 +73,9 @@
     
     <string name="islam_pillars" translatable="false">Islam\'s Pillars</string>
     <string name="islam_pillar1" translatable="false">الشهادتان</string>
-    
+    <string name="shhada" translatable="false">الركن الأول الشهادتان</string>
+    <string name="shhada_info" translatable="false">الركن الأول من أركان الإسلام هو الشهادتين وهو أن تشهد أن لا إله إلا الله وأن محمداً عبده ورسوله ، ولا تعني قول الشهادة بالنطق فقط ولكن يجب إيمان القلب أنه لا يوجد إله غير الله والايمان أن سيدنا محمداً صلى الله عليه وسلم هو رسول الله، وأنه الله الواحد الاحد وأن نعبده دون أن نشرك به أحد</string>
+
     <string name="islam_pillar2" translatable="false">الصلاة</string>
     <string name="slah_way_1" translatable="false">الصلوات الخمس</string>
     <string name="slah_way_2" translatable="false">القيام</string>
@@ -88,8 +90,16 @@
     <string name="slah_way_11" translatable="false">السلام</string>
     
     <string name="islam_pillar3" translatable="false">الزكاة</string>
+    <string name="zkah" translatable="false">الركن الثالث إيتاء الزكاة</string>
+    <string name="zkah_info" translatable="false">هو ثالت ركن من أركان الاسلام  وقد قال الله تعالى ( وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ )، وتعرف الزكاة على جزء من المال يقوم الغني بإخراجه كل عام ليعطيه للفقراء والمحتاجين، وقد فرض الله الزكاة حتى يكفل الغني الفقير فلا يشعر الفقير بالحسد لأنه لا يمتلك المال ولا ينسى الغني الفقير فيحدث ترابط في المجتمع</string>
+
     <string name="islam_pillar4" translatable="false">الصوم</string>
+    <string name="som" translatable="false">الركن الرابع صوم رمضان</string>
+    <string name="som_info" translatable="false">رابع ركن من أركان الاسلام هو صوم رمضان حيث قال الله تعالى ( يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ )، ويصوم المسلم شهر رمضان كل عام عن طريق الامتناع عن الطعام والشراب من الفجر حتى المغرب، وقد أمر الله تعالى لصوم رمضان حتى يشعر الأغنياء بجوع الفقراء، وليشعر المسلمين بنعم الله عليهم</string>
+
     <string name="islam_pillar5" translatable="false">الحج</string>
+    <string name="hag" translatable="false">الركن الخامس حج البيت من استطاع إليه سبيلا</string>
+    <string name="hag_info" translatable="false">هو الركن الخامس من أركان الاسلام الخمس، وقد أمر الله المسلمين بحج البيت ولمن استطاع وقد قال تعالى ( وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا )، ويعرف الحج على أنه زيارة بيت الله الحرام والطواف حول الكعبة المكرمة والسعي بين الصفا والمروة والوقوف بجبل عرفات والقيام بكل مناسك الحج</string>
 
     <string name="al_azkar">Al-Azkar</string>
     <string name="sbah_zekr" translatable="false">الصباح</string>

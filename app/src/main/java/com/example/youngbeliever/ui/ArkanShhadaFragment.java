@@ -20,10 +20,9 @@ public class ArkanShhadaFragment extends Fragment
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
+    {
         View rootView = inflater.inflate(R.layout.arkan_shhada_layout, container, false);
-
-        TextView test = rootView.findViewById(R.id.test);
 
         return rootView;
     }
