@@ -31,6 +31,16 @@
                 android:gravity="start"
                 android:padding="7dp"
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/bsmla"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="7dp"
+                android:textSize="20sp"
                 android:id="@+id/dua"
                 android:textColor="@color/white"/>
 
@@ -40,7 +50,7 @@
                 android:gravity="start"
                 android:padding="7dp"
                 android:id="@+id/dua_info"
-                android:textColor="#A8A19E"/>
+                android:textColor="@color/secondary_text"/>
 
         </LinearLayout>
 

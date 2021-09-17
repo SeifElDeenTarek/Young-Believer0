@@ -38,6 +38,15 @@ public class DuasAdapter extends RecyclerView.Adapter<DuasAdapter.DuasViewHolder
             holder.duaProphet.setVisibility(View.GONE);
         }
 
+        if(duasList.get(position).hasBsmla())
+        {
+            holder.bsmla.setText(duasList.get(position).getBsmla());
+            holder.bsmla.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.bsmla.setVisibility(View.GONE);
+        }
+
         holder.dua.setText(duasList.get(position).getDua());
         holder.duaInfo.setText(duasList.get(position).getDuaInfo());
 
@@ -66,7 +75,7 @@ public class DuasAdapter extends RecyclerView.Adapter<DuasAdapter.DuasViewHolder
 
     public class DuasViewHolder extends RecyclerView.ViewHolder
     {
-        TextView dua, duaInfo;
+        TextView dua, duaInfo, bsmla;
         ImageView duaProphet;
         public DuasViewHolder(@NonNull View itemView)
         {
@@ -74,6 +83,7 @@ public class DuasAdapter extends RecyclerView.Adapter<DuasAdapter.DuasViewHolder
             dua = itemView.findViewById(R.id.dua);
             duaInfo = itemView.findViewById(R.id.dua_info);
             duaProphet = itemView.findViewById(R.id.dua_prophet);
+            bsmla = itemView.findViewById(R.id.bsmla);
         }
     }
 }

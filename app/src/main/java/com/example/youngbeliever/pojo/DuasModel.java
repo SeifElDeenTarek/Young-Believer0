@@ -5,6 +5,7 @@ public class DuasModel
     int dua;
     int duaInfo;
     int duaProphet = NO_IMAGE_PROVIDED;
+    int bsmla = NO_IMAGE_PROVIDED;
     static final int NO_IMAGE_PROVIDED = -1;
 
     public DuasModel(int dua, int duaInfo)
@@ -13,11 +14,28 @@ public class DuasModel
         this.duaInfo = duaInfo;
     }
 
-    public DuasModel(int duaProphet, int dua, int duaInfo)
+    public int getBsmla()
     {
-        this.duaProphet = duaProphet;
+        return bsmla;
+    }
+
+    public boolean hasBsmla()
+        {
+            return bsmla != NO_IMAGE_PROVIDED;
+        }
+
+    public DuasModel(int dua, int duaInfo, int bsmla)
+    {
         this.dua = dua;
         this.duaInfo = duaInfo;
+        this.bsmla = bsmla;
+    }
+
+    public DuasModel(int duaProphet, int dua, int duaInfo , int bsmla) {
+        this.dua = dua;
+        this.duaInfo = duaInfo;
+        this.duaProphet = duaProphet;
+        this.bsmla = bsmla;
     }
 
     public int getDuaProphet()

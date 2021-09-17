@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/asm_allah_meaning"
-                android:background="@drawable/back1"
+                android:background="@color/primary_blue"
                 android:textSize="24sp"
                 android:textColor="@color/white"
                 android:padding="10dp"/>
