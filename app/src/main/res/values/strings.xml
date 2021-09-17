@@ -8,11 +8,66 @@
     <string name="bsmla" translatable="false">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم</string>
 
     <string name="holy_quran">Holy Quran</string>
-    <string name="sura_num1" translatable="false">100</string>
+    <string name="sura_num1" translatable="false">1</string>
     <string name="sura_name1" translatable="false">سورة الفاتحة</string>
-    <string name="sura_revelation" translatable="false">مكية</string>
-    <string name="sura_ayah_num" translatable="false">7 آيــات</string>
-
+    <string name="sura_revelation1" translatable="false">مكية</string>
+    <string name="sura_ayah_num1" translatable="false">7 آيــات</string>
+    <string name="sura_num2" translatable="false">2</string>
+    <string name="sura_name2" translatable="false">سورة البقرة</string>
+    <string name="sura_revelation2" translatable="false">مدنية</string>
+    <string name="sura_ayah_num2" translatable="false">286 آيــات</string>
+    <string name="sura_num3" translatable="false">3</string>
+    <string name="sura_name3" translatable="false">سورة آل عمران</string>
+    <string name="sura_revelation3" translatable="false">مدنية</string>
+    <string name="sura_ayah_num3" translatable="false">200 آيــات</string>
+    <string name="sura_num4" translatable="false">4</string>
+    <string name="sura_name4" translatable="false">سورة النساء</string>
+    <string name="sura_revelation4" translatable="false">مدنية</string>
+    <string name="sura_ayah_num4" translatable="false">176 آيــات</string>
+    <string name="sura_num5" translatable="false">5</string>
+    <string name="sura_name5" translatable="false">سورة المائدة</string>
+    <string name="sura_revelation5" translatable="false">مدنية</string>
+    <string name="sura_ayah_num5" translatable="false">120 آيــات</string>
+    <string name="sura_num6" translatable="false">6</string>
+    <string name="sura_name6" translatable="false">سورة الأنعام</string>
+    <string name="sura_revelation6" translatable="false">مكية</string>
+    <string name="sura_ayah_num6" translatable="false">165 آيــات</string>
+    <string name="sura_num7" translatable="false">7</string>
+    <string name="sura_name7" translatable="false">سورة الأعراف</string>
+    <string name="sura_revelation7" translatable="false">مكية</string>
+    <string name="sura_ayah_num7" translatable="false">206 آيــات</string>
+    <string name="sura_num8" translatable="false">8</string>
+    <string name="sura_name8" translatable="false">سورة الأنفال</string>
+    <string name="sura_revelation8" translatable="false">مدنية</string>
+    <string name="sura_ayah_num8" translatable="false">175 آيــات</string>
+    <string name="sura_num9" translatable="false">9</string>
+    <string name="sura_name9" translatable="false">سورة التوبة</string>
+    <string name="sura_revelation9" translatable="false">مدنية</string>
+    <string name="sura_ayah_num9" translatable="false">129 آيــات</string>
+    <string name="sura_num10" translatable="false">10</string>
+    <string name="sura_name10" translatable="false">سورة يونس</string>
+    <string name="sura_revelation10" translatable="false">مكية</string>
+    <string name="sura_ayah_num10" translatable="false">109 آيــات</string>
+    <string name="sura_num11" translatable="false">11</string>
+    <string name="sura_name11" translatable="false">سورة هود</string>
+    <string name="sura_revelation11" translatable="false">مكية</string>
+    <string name="sura_ayah_num11" translatable="false">123 آيــات</string>
+    <string name="sura_num12" translatable="false">12</string>
+    <string name="sura_name12" translatable="false">سورة يوسف</string>
+    <string name="sura_revelation12" translatable="false">مكية</string>
+    <string name="sura_ayah_num12" translatable="false">111 آيــات</string>
+    <string name="sura_num13" translatable="false">13</string>
+    <string name="sura_name13" translatable="false">سورة الرعد</string>
+    <string name="sura_revelation13" translatable="false">مدنية</string>
+    <string name="sura_ayah_num13" translatable="false">43 آيــات</string>
+    <string name="sura_num14" translatable="false">14</string>
+    <string name="sura_name14" translatable="false">سورة إبراهيم</string>
+    <string name="sura_revelation14" translatable="false">مكية</string>
+    <string name="sura_ayah_num14" translatable="false">52 آيــات</string>
+    <string name="sura_num15" translatable="false">15</string>
+    <string name="sura_name15" translatable="false">سورة الحجر</string>
+    <string name="sura_revelation15" translatable="false">مكية</string>
+    <string name="sura_ayah_num15" translatable="false">99 آيــات</string>
     
     
     
