@@ -32,7 +32,7 @@
             android:id="@+id/asmaa_allah_recycler"/>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/asm_allah_meaning"
-                android:background="@color/primary_blue"
+                android:background="@drawable/back1"
                 android:textSize="24sp"
                 android:textColor="@color/white"
                 android:padding="10dp"/>
