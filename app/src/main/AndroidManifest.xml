@@ -9,39 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YoungBeliever">
-        <activity android:name=".ui.SlahVideo"></activity>
-        <activity android:name=".ui.StoriesPDF" />
-        <activity
-            android:name=".ui.ArkanActivity"
-            android:label="@string/islam_pillars"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity
-            android:name=".ui.StoriesActivity"
-            android:label="@string/prophets_stories"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity
-            android:name=".ui.DuasActivity"
-            android:label="@string/duas"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity
-            android:name=".ui.AzkarActivity"
-            android:label="@string/al_azkar"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity
-            android:name=".ui.AsmaaAllahActivity"
-            android:label="@string/god_names"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity
-            android:name=".ui.QuranActivity"
-            android:label="@string/holy_quran"
-            android:parentActivityName=".ui.HomeActivity" />
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.StoriesPDF"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ArkanActivity"
+            android:label="@string/islam_pillars"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StoriesActivity"
+            android:label="@string/prophets_stories"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.DuasActivity"
+            android:label="@string/duas"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AzkarActivity"
+            android:label="@string/al_azkar"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AsmaaAllahActivity"
+            android:label="@string/god_names"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.QuranActivity"
+            android:label="@string/holy_quran"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
     </application>
-
 </manifest>

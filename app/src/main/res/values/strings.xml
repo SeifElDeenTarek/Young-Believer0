@@ -68,9 +68,8 @@
     <string name="sura_name15" translatable="false">سورة الحجر</string>
     <string name="sura_revelation15" translatable="false">مكية</string>
     <string name="sura_ayah_num15" translatable="false">99 آيــات</string>
-    
-    
-    
+
+
     <string name="islam_pillars" translatable="false">Islam\'s Pillars</string>
     <string name="islam_pillar1" translatable="false">الشهادتان</string>
     <string name="shhada" translatable="false">الركن الأول الشهادتان</string>
@@ -88,7 +87,7 @@
     <string name="slah_way_9" translatable="false">الركعة الثالثة والرابعة</string>
     <string name="slah_way_10" translatable="false">التشهد الأخير</string>
     <string name="slah_way_11" translatable="false">السلام</string>
-    
+
     <string name="islam_pillar3" translatable="false">الزكاة</string>
     <string name="zkah" translatable="false">الركن الثالث إيتاء الزكاة</string>
     <string name="zkah_info" translatable="false">هو ثالت ركن من أركان الاسلام  وقد قال الله تعالى ( وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ )، وتعرف الزكاة على جزء من المال يقوم الغني بإخراجه كل عام ليعطيه للفقراء والمحتاجين، وقد فرض الله الزكاة حتى يكفل الغني الفقير فلا يشعر الفقير بالحسد لأنه لا يمتلك المال ولا ينسى الغني الفقير فيحدث ترابط في المجتمع</string>
