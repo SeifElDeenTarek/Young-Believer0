@@ -6,13 +6,17 @@ public class QuranModel
     int suraName;
     int suraRevelation;
     int suraAyahNum;
+    int suraPage;
+    int suraAudio;
 
-    public QuranModel(int suraNum, int suraName, int suraRevelation, int suraAyahNum)
+    public QuranModel(int suraNum, int suraName, int suraRevelation, int suraAyahNum,int suraPage, int suraAudio)
     {
         this.suraNum = suraNum;
         this.suraName = suraName;
         this.suraRevelation = suraRevelation;
         this.suraAyahNum = suraAyahNum;
+        this.suraPage = suraPage;
+        this.suraAudio = suraAudio;
     }
 
     public int getSuraNum()
@@ -33,5 +37,15 @@ public class QuranModel
     public int getSuraAyahNum()
     {
         return suraAyahNum;
+    }
+
+    public int getSuraPage()
+    {
+        return suraPage;
+    }
+
+    public int getSuraAudio()
+    {
+        return suraAudio;
     }
 }

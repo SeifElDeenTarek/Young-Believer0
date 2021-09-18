@@ -19,6 +19,7 @@ import android.view.View;
 
 import com.example.youngbeliever.R;
 import com.example.youngbeliever.pojo.QuranModel;
+import com.github.barteksc.pdfviewer.PDFView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
     NavigationView quranNavigation;
     RecyclerView quranRecycler;
     QuranViewModel quranViewModel;
+    PDFView quranPDf;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,6 +42,7 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
         quranDrawer = findViewById(R.id.quran_drawer_layout);
         quranNavigation = findViewById(R.id.quran_navigation_view);
         quranRecycler = findViewById(R.id.quran_recycler_view);
+        quranPDf = findViewById(R.id.quran_pdf_view);
 
         quranViewModel = ViewModelProviders.of(this).get(QuranViewModel.class);
 
@@ -76,6 +79,7 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
                     @Override
                     public void onItemCLick(QuranModel quranModel)
                     {
+                        QuranPDF(quranModel.getSuraPage(), quranModel.getSuraAudio());
                     }
                 });
             }
@@ -83,6 +87,14 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
 
         quranRecycler.setLayoutManager(new LinearLayoutManager(this));
         quranRecycler.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+    }
+
+    public void QuranPDF(int pageNum, int suraAudio)
+    {
+        Intent intent = new Intent(this, QuranPDF.class);
+        intent.putExtra("page_number", pageNum);
+        intent.putExtra("sura_audio", suraAudio);
+        startActivity(intent);
     }
 
     @Override

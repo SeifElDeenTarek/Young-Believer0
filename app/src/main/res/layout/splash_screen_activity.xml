@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.SplashScreen"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:background="@drawable/back1">
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,7 +24,11 @@
         android:textStyle="bold"
         android:gravity="center_horizontal"
         android:textSize="40sp"
-        android:textColor="@color/primary_blue"
+        android:textColor="@color/white"
+        android:shadowColor="@color/primary_blue"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="4"
         android:id="@+id/splash_text"/>
 
 

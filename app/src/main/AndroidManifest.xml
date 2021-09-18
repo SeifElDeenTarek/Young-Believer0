@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.youngbeliever">
 
     <application
@@ -18,9 +19,6 @@
         </activity>
         <activity
             android:name=".ui.HomeActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".ui.StoriesPDF"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.ArkanActivity"
@@ -28,8 +26,16 @@
             android:parentActivityName=".ui.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.StoriesActivity"
-            android:label="@string/prophets_stories"
+            android:name=".ui.QuranActivity"
+            android:label="@string/holy_quran"
+            android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.QuranPDF"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.AzkarActivity"
+            android:label="@string/al_azkar"
             android:parentActivityName=".ui.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -38,19 +44,18 @@
             android:parentActivityName=".ui.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.AzkarActivity"
-            android:label="@string/al_azkar"
+            android:name=".ui.StoriesActivity"
+            android:label="@string/prophets_stories"
             android:parentActivityName=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StoriesPDF"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.AsmaaAllahActivity"
             android:label="@string/god_names"
             android:parentActivityName=".ui.HomeActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.QuranActivity"
-            android:label="@string/holy_quran"
-            android:parentActivityName=".ui.HomeActivity"
-            android:screenOrientation="portrait" />
     </application>
+
 </manifest>

@@ -20,9 +20,10 @@ public class QuranViewModel extends ViewModel
     private ArrayList<QuranModel> getSuraFromDateBase()
     {
         ArrayList<QuranModel> suras = new ArrayList<>();
-        suras.add(new QuranModel(R.string.sura_num1, R.string.sura_name1, R.string.sura_revelation1, R.string.sura_ayah_num1));
-        suras.add(new QuranModel(R.string.sura_num2, R.string.sura_name2, R.string.sura_revelation2, R.string.sura_ayah_num2));
-        suras.add(new QuranModel(R.string.sura_num3, R.string.sura_name3, R.string.sura_revelation3, R.string.sura_ayah_num3));
+        suras.add(new QuranModel(R.string.sura_num1, R.string.sura_name1, R.string.sura_revelation1, R.string.sura_ayah_num1,1, R.raw.fatiha));
+        suras.add(new QuranModel(R.string.sura_num2, R.string.sura_name2, R.string.sura_revelation2, R.string.sura_ayah_num2, 2, R.raw.albqara));
+        suras.add(new QuranModel(R.string.sura_num3, R.string.sura_name3, R.string.sura_revelation3, R.string.sura_ayah_num3, 45, R.raw.alemran));
+ /*
         suras.add(new QuranModel(R.string.sura_num4, R.string.sura_name4, R.string.sura_revelation4, R.string.sura_ayah_num4));
         suras.add(new QuranModel(R.string.sura_num5, R.string.sura_name5, R.string.sura_revelation5, R.string.sura_ayah_num5));
         suras.add(new QuranModel(R.string.sura_num6, R.string.sura_name6, R.string.sura_revelation6, R.string.sura_ayah_num6));
@@ -134,6 +135,8 @@ public class QuranViewModel extends ViewModel
         suras.add(new QuranModel(R.string.sura_num112, R.string.sura_name112, R.string.sura_revelation112, R.string.sura_ayah_num112));
         suras.add(new QuranModel(R.string.sura_num113, R.string.sura_name113, R.string.sura_revelation113, R.string.sura_ayah_num113));
         suras.add(new QuranModel(R.string.sura_num114, R.string.sura_name114, R.string.sura_revelation114, R.string.sura_ayah_num114));
+
+   */
         return suras;
     }
 }
