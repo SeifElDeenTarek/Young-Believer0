@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.QuranPDF">
+    tools:context=".ui.QuranPDF"
+    android:orientation="vertical">
 
     <com.github.barteksc.pdfviewer.PDFView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/quran_pdf_view"/>
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/container">
+
+        <SeekBar
+            android:id="@+id/quran_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/primary_blue"/>
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:background="@color/primary_blue"
+            android:layout_below="@id/quran_seekbar"
+            android:layout_centerInParent="true"
+            android:src="@drawable/baseline_play_arrow_white_48"
+            android:id="@+id/quran_play"/>
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/primary_blue"
+            android:layout_below="@id/quran_seekbar"
+            android:layout_centerInParent="true"
+            android:src="@drawable/baseline_pause_white_48"
+            android:id="@+id/quran_pause"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

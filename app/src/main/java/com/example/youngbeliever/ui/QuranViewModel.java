@@ -23,7 +23,7 @@ public class QuranViewModel extends ViewModel
         suras.add(new QuranModel(R.string.sura_num1, R.string.sura_name1, R.string.sura_revelation1, R.string.sura_ayah_num1,0, R.raw.fatiha1));
         suras.add(new QuranModel(R.string.sura_num2, R.string.sura_name2, R.string.sura_revelation2, R.string.sura_ayah_num2, 1, R.raw.albqara));
         suras.add(new QuranModel(R.string.sura_num3, R.string.sura_name3, R.string.sura_revelation3, R.string.sura_ayah_num3, 44, R.raw.alemran));
-
+/*
         suras.add(new QuranModel(R.string.sura_num4, R.string.sura_name4, R.string.sura_revelation4, R.string.sura_ayah_num4, 68, R.raw.nesaa4));
         suras.add(new QuranModel(R.string.sura_num5, R.string.sura_name5, R.string.sura_revelation5, R.string.sura_ayah_num5, 94, R.raw.maaeda5));
         suras.add(new QuranModel(R.string.sura_num6, R.string.sura_name6, R.string.sura_revelation6, R.string.sura_ayah_num6, 114, R.raw.anam6));
@@ -135,6 +135,7 @@ public class QuranViewModel extends ViewModel
         suras.add(new QuranModel(R.string.sura_num112, R.string.sura_name112, R.string.sura_revelation112, R.string.sura_ayah_num112, 567, R.raw.elekhlas112));
         suras.add(new QuranModel(R.string.sura_num113, R.string.sura_name113, R.string.sura_revelation113, R.string.sura_ayah_num113, 567, R.raw.elflk113));
         suras.add(new QuranModel(R.string.sura_num114, R.string.sura_name114, R.string.sura_revelation114, R.string.sura_ayah_num114, 567, R.raw.elnas114));
+        */
         return suras;
     }
 }
