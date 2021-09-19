@@ -32,12 +32,15 @@ public class QuranPDF extends AppCompatActivity
         public void onAudioFocusChange(int focusChange)
         {
             if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK)
+            {
                 mMediaPlayer.pause();
                 mMediaPlayer.seekTo(0);
-            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN)
+            {
                 mMediaPlayer.start();
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS)
+            {
                 releaseMediaPlayer();
             }
         }
@@ -52,10 +55,10 @@ public class QuranPDF extends AppCompatActivity
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
 
         int pageNum = getIntent().getIntExtra("page_number", 1);
-        int suraAudio = getIntent().getIntExtra("sura_audio", R.raw.fatiha);
+        int suraAudio = getIntent().getIntExtra("sura_audio", R.raw.fatiha1);
 
         quranPDF.fromAsset("holy_quran.pdf")
-                .defaultPage(pageNum-1)
+                .defaultPage(pageNum)
                  //.swipeHorizontal(true)
                 .enableSwipe(true)
                 .enableDoubletap(true)
