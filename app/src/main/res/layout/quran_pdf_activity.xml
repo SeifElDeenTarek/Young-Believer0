@@ -14,39 +14,72 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/container">
+        android:layout_alignBottom="@+id/quran_pdf_view"
+        android:background="@color/primary_blue"
+        android:id="@+id/container"
+        android:orientation="vertical">
 
         <SeekBar
             android:id="@+id/quran_seekbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:thumbTint="@color/primary_blue"/>
+            android:thumbTint="@color/white"/>
 
-        <ImageButton
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/primary_blue"
+            android:layout_weight="1"
+            android:src="@drawable/outline_skip_previous_white_48"
+            android:id="@+id/quran_forward"
+            android:contentDescription="@string/quran_player_backward" />
+
+            <ImageButton
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_gravity="center"
             android:background="@color/primary_blue"
-            android:layout_below="@id/quran_seekbar"
-            android:layout_centerInParent="true"
-            android:src="@drawable/baseline_play_arrow_white_48"
-            android:id="@+id/quran_play"/>
+            android:layout_weight="1"
+            android:src="@drawable/outline_play_circle_white_48"
+            android:id="@+id/quran_play"
+            android:contentDescription="@string/quran_player_play" />
 
-        <ImageButton
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/primary_blue"
+                android:src="@drawable/outline_pause_circle_white_48"
+                android:id="@+id/quran_pause"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:contentDescription="@string/quran_player_pause" />
+
+            <ImageButton
             android:layout_width="55dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_gravity="center"
             android:background="@color/primary_blue"
-            android:layout_below="@id/quran_seekbar"
-            android:layout_centerInParent="true"
-            android:src="@drawable/baseline_pause_white_48"
-            android:id="@+id/quran_pause"
-            android:layout_margin="5dp"
-            android:visibility="gone"/>
+            android:layout_weight="1"
+            android:src="@drawable/outline_skip_next_white_48"
+            android:id="@+id/quran_backward"
+            android:contentDescription="@string/quran_player_forward" />
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 

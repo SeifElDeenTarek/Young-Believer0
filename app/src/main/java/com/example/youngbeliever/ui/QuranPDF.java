@@ -32,6 +32,10 @@ public class QuranPDF extends AppCompatActivity
     SeekBar quranSeekBar;
     ImageButton quranPlay;
     ImageButton quranPause;
+    ImageButton quranForward;
+    ImageButton quranBackward;
+
+    int audioPosition;
 
     private Handler mHandler;
     private Runnable mRunnable;
@@ -39,13 +43,13 @@ public class QuranPDF extends AppCompatActivity
     private Activity mActivity;
 
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener()
+    {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer)
         {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer)
-            {
-                releaseMediaPlayer();
-            }
-        };
+            releaseMediaPlayer();
+        }
+    };
 
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener()
     {
@@ -79,13 +83,15 @@ public class QuranPDF extends AppCompatActivity
         quranSeekBar = findViewById(R.id.quran_seekbar);
         quranPlay = findViewById(R.id.quran_play);
         quranPause = findViewById(R.id.quran_pause);
+        quranForward = findViewById(R.id.quran_forward);
+        quranBackward = findViewById(R.id.quran_backward);
 
         int pageNum = getIntent().getIntExtra("page_number", 1);
         int suraAudio = getIntent().getIntExtra("sura_audio", R.raw.fatiha1);
 
         quranPDF.fromAsset("holy_quran.pdf")
                 .defaultPage(pageNum)
-                 //.swipeHorizontal(true)
+                //.swipeHorizontal(true)
                 .enableSwipe(true)
                 .enableDoubletap(true)
                 .load();
@@ -95,26 +101,34 @@ public class QuranPDF extends AppCompatActivity
         quranPlay.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view) 
+            public void onClick(View view)
             {
                 quranPause.setVisibility(View.VISIBLE);
+                quranPlay.setVisibility(View.GONE);
                 // If media player another instance already running then stop it first
-                releaseMediaPlayer();
+                //releaseMediaPlayer();
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED)
                 {
-                    // Initialize media player
-                    QuranPlayer = MediaPlayer.create(mContext, suraAudio);
+                    if (audioPosition > 0)
+                    {
+                        QuranPlayer.seekTo(audioPosition);
+                        QuranPlayer.start();
+                    }
+                    else {
+                        // Initialize media player
+                        QuranPlayer = MediaPlayer.create(mContext, suraAudio);
 
-                    // Start the media player
-                    QuranPlayer.start();
+                        // Start the media player
+                        QuranPlayer.start();
 
-                    // Get the current audio stats
-                    getAudioStats();
-                    // Initialize the seek bar
-                    initializeSeekBar();
+                        // Get the current audio stats
+                        getAudioStats();
+                        // Initialize the seek bar
+                        initializeSeekBar();
+                    }
                 }
             }
         });
@@ -126,7 +140,58 @@ public class QuranPDF extends AppCompatActivity
             {
                 quranPlay.setVisibility(View.VISIBLE);
                 quranPause.setVisibility(View.GONE);
+                QuranPlayer.pause();
+                audioPosition = QuranPlayer.getCurrentPosition();
+            }
+        });
+
+        quranForward.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                /*
+                quranPause.setVisibility(View.VISIBLE);
+                quranPlay.setVisibility(View.GONE);
+
                 releaseMediaPlayer();
+
+                // Initialize media player
+                QuranPlayer = MediaPlayer.create(mContext, suraAfter);
+
+                // Start the media player
+                QuranPlayer.start();
+
+                // Get the current audio stats
+                getAudioStats();
+                // Initialize the seek bar
+                initializeSeekBar();
+                 */
+            }
+        });
+
+        quranBackward.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                /*
+                quranPause.setVisibility(View.VISIBLE);
+                quranPlay.setVisibility(View.GONE);
+
+                releaseMediaPlayer();
+
+                // Initialize media player
+                QuranPlayer = MediaPlayer.create(mContext, sureBefore);
+
+                // Start the media player
+                QuranPlayer.start();
+
+                // Get the current audio stats
+                getAudioStats();
+                // Initialize the seek bar
+                initializeSeekBar();
+                */
             }
         });
 /*
@@ -192,7 +257,7 @@ public class QuranPDF extends AppCompatActivity
     public void onPause()
     {
         super.onPause();
-        releaseMediaPlayer();
+        //releaseMediaPlayer();
         quranPause.setVisibility(View.GONE);
     }
     protected void getAudioStats()
@@ -200,11 +265,12 @@ public class QuranPDF extends AppCompatActivity
         int duration  = QuranPlayer.getDuration()/1000; // In milliseconds
         int due = (QuranPlayer.getDuration() - QuranPlayer.getCurrentPosition())/1000;
         int pass = duration - due;
-/*
+        /*
         mPass.setText("" + pass + " seconds");
         mDuration.setText("" + duration + " seconds");
         mDue.setText("" + due + " seconds");
-    */}
+        */
+    }
     protected void initializeSeekBar()
     {
         quranSeekBar.setMax(QuranPlayer.getDuration()/1000);
@@ -223,5 +289,11 @@ public class QuranPDF extends AppCompatActivity
             }
         };
         mHandler.postDelayed(mRunnable,1000);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        releaseMediaPlayer();
     }
 }

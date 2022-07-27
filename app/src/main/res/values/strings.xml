@@ -465,6 +465,11 @@
     <string name="sura_revelation114" translatable="false">مكية</string>
     <string name="sura_ayah_num114" translatable="false">6 آيــات</string>
 
+    <string name="quran_player_play" translatable="false">Play</string>
+    <string name="quran_player_pause" translatable="false">Pause</string>
+    <string name="quran_player_forward" translatable="false">Forward</string>
+    <string name="quran_player_backward" translatable="false">Backward</string>
+
 
     <string name="islam_pillars" translatable="false">Islam\'s Pillars</string>
     <string name="islam_pillar1" translatable="false">الشهادتان</string>

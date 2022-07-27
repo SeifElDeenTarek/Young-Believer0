@@ -32,6 +32,7 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
     RecyclerView quranRecycler;
     QuranViewModel quranViewModel;
     PDFView quranPDf;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -104,7 +105,8 @@ public class QuranActivity extends AppCompatActivity implements NavigationView.O
         {
             quranDrawer.closeDrawer(GravityCompat.START);
         }
-        else {
+        else
+        {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
             super.onBackPressed();
